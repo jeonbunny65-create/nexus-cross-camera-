@@ -3,62 +3,37 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./context/**/*.{js,ts,jsx,tsx}",
+    "./data/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        tactical: {
-          bg: '#060911',
-          card: 'rgba(13, 20, 36, 0.72)',
-          'card-hover': 'rgba(21, 32, 56, 0.85)',
-          panel: 'rgba(9, 14, 26, 0.85)',
-          border: 'rgba(56, 189, 248, 0.18)',
-          'border-subtle': 'rgba(148, 163, 184, 0.12)',
-          'border-alert': 'rgba(239, 68, 68, 0.35)',
-          accent: '#06b6d4', // cyan-500
-          cyan: '#00f0ff',
-          alert: '#ff3366',
-          warning: '#f59e0b',
-          success: '#10b981',
-          radar: '#00ff9d',
-        }
+        brand: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+        },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'Roboto Mono', 'monospace'],
-        plate: ['FE-Schrift', 'Euro Plate', 'Arial Black', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
-      backgroundImage: {
-        'radial-glow': 'radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.15) 0%, rgba(15, 23, 42, 0) 70%)',
-        'threat-glow': 'radial-gradient(circle at 80% 20%, rgba(239, 68, 68, 0.12) 0%, transparent 60%)',
-        'grid-pattern': 'linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)',
+      boxShadow: {
+        'xs': '0 1px 2px 0 rgba(0, 0, 0, 0.03)',
+        'card': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05)',
+        'card-hover': '0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05)',
+        'dropdown': '0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04)',
       },
-      animation: {
-        'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'scanline': 'scanline 8s linear infinite',
-        'radar-sweep': 'radarSweep 4s linear infinite',
-        'beacon': 'beacon 2s cubic-bezier(0, 0, 0.2, 1) infinite',
-        'glow-pulse': 'glowPulse 2s ease-in-out infinite alternate',
-      },
-      keyframes: {
-        scanline: {
-          '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(1000%)' },
-        },
-        radarSweep: {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
-        },
-        beacon: {
-          '0%': { transform: 'scale(1)', opacity: '1' },
-          '75%, 100%': { transform: 'scale(2.5)', opacity: '0' },
-        },
-        glowPulse: {
-          '0%': { boxShadow: '0 0 15px rgba(6, 182, 212, 0.2)' },
-          '100%': { boxShadow: '0 0 30px rgba(6, 182, 212, 0.6)' },
-        }
-      }
     },
   },
   plugins: [],
